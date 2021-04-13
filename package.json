@@ -1,5 +1,5 @@
 {
-  "name": "express-boilerplate",
+  "name": "munch-compendium-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,11 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.3.1",
-    "morgan": "^1.10.0"
+    "knex": "^0.95.4",
+    "knex-paginate": "^2.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^7.18.2",
+    "postgrator-cli": "^3.2.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
