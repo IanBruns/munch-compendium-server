@@ -63,6 +63,13 @@ function makePostsArray() {
     ]
 }
 
+function makeMunchFixtures() {
+    const testBrands = makeBrandsArray();
+    const testPosts = makePostsArray();
+
+    return { testBrands, testPosts };
+}
+
 async function seedTables(db) {
     const brands = makeBrandsArray();
     const posts = makePostsArray();
