@@ -6,7 +6,7 @@ const helpers = require('./test-helpers');
 describe('posts endpoints', () => {
     let db;
 
-    const { testBrands, testPosts } = helpers.makeMunchFixtures();
+    const { testPosts } = helpers.makeMunchFixtures();
 
     before(`Make knex instance`, () => {
         db = knex({

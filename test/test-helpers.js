@@ -2,9 +2,8 @@ function cleanTables(db) {
     return db.transaction(async trx =>
         await trx.raw(
             `TRUNCATE
-            usersbrands,
-                posts,
                 brands,
+                posts;
             `
         )
             .then(() =>
@@ -53,7 +52,7 @@ function makePostsArray() {
         },
         {
             id: 3,
-            brand_id: 3,
+            brand_id: 2,
             episode_number: 3,
             episode_title: 'Title for Episode 3',
             episode_link: 'Link for Episode 3',
