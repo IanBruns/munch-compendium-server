@@ -63,6 +63,14 @@ function makePostsArray() {
     ]
 }
 
+async function seedTables(db) {
+    const brands = makeBrandsArray();
+    const posts = makePostsArray();
+
+    await db.into('brands').insert(brands);
+    await db.into('posts').insert(posts);
+}
+
 module.exports = {
     cleanTables,
     makeBrandsArray,

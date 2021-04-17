@@ -20,4 +20,8 @@ describe('posts endpoints', () => {
     before('cleanup', () => helpers.cleanTables(db));
 
     afterEach('cleanup', () => helpers.cleanTables(db));
-})
+
+    describe(`GET requests`, () => {
+        beforeEach(`Seed Database`, () => helpers.seedTables(db));
+    });
+});
