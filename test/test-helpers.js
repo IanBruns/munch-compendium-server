@@ -92,4 +92,5 @@ module.exports = {
     makeBrandsArray,
     makePostsArray,
     seedTables,
+    makeMunchFixtures,
 }
