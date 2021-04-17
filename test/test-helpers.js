@@ -68,7 +68,16 @@ async function seedTables(db) {
     const posts = makePostsArray();
 
     await db.into('brands').insert(brands);
+    await db.raw(
+        `SELECT setval('brands_id_seq', ?)`,
+        [brands[brands.length - 1].id],
+    );
+
     await db.into('posts').insert(posts);
+    await db.raw(
+        `SELECT setval('posts_id_seq', ?)`,
+        [posts[posts.length - 1].id],
+    );
 }
 
 module.exports = {
