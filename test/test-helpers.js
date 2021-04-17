@@ -83,5 +83,6 @@ async function seedTables(db) {
 module.exports = {
     cleanTables,
     makeBrandsArray,
-    makePostsArray
+    makePostsArray,
+    seedTables,
 }

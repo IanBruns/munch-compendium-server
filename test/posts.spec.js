@@ -21,7 +21,10 @@ describe('posts endpoints', () => {
 
     afterEach('cleanup', () => helpers.cleanTables(db));
 
-    describe(`GET requests`, () => {
+    describe(`GET /posts requests`, () => {
         beforeEach(`Seed Database`, () => helpers.seedTables(db));
+
+        it('Returns all items', async () => {
+        });
     });
 });
