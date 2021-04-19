@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const postsRouter = require('./posts/posts-router');
+const brandsRouter = require('./brands/brands-router');
 
 const app = express();
 
@@ -28,5 +29,6 @@ app.use(function errorHandler(error, req, res, next) {
 });
 
 app.use('/api/posts', postsRouter);
+app.use('/api/brands', brandsRouter);
 
 module.exports = app;

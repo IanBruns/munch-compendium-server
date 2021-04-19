@@ -15,9 +15,21 @@ describe('brands endpoints', () => {
         app.set('db', db);
     });
 
+    const { testBrands } = helpers.makeMunchFixtures();
+
     after('disconnect from db', () => db.destroy());
 
     before('cleanup', () => helpers.cleanTables(db));
 
     afterEach('cleanup', () => helpers.cleanTables(db));
+
+    describe('Get /api/brands', () => {
+        beforeEach(`Seed Database`, () => helpers.seedTables(db));
+
+        it('returns all brands', () => {
+            return supertest(app)
+                .get('/api/brands')
+                .expect(200, testBrands);
+        });
+    });
 });
