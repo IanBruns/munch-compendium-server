@@ -32,4 +32,17 @@ describe('posts endpoints', () => {
                 .expect(200, testPosts);
         });
     });
+
+    describe('GET /posts/brands/:brand_id', () => {
+        beforeEach(`Seed Database`, () => helpers.seedTables(db));
+
+        it('returns only the Carls Jr posts', () => {
+            const testId = 2;
+            const cjTests = testPosts.filter(post => post.brand_id === testId);
+
+            return supertest(app)
+                .get(`/posts/brands/${testId}`)
+                .expect(200, cjTests);
+        })
+    });
 });
