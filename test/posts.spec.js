@@ -43,6 +43,6 @@ describe('posts endpoints', () => {
             return supertest(app)
                 .get(`/api/posts/brands/${testId}`)
                 .expect(200, cjTests);
-        })
+        });
     });
 });
