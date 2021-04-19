@@ -11,6 +11,9 @@ const PostsService = {
             .from('posts as p')
             .fullOuterJoin('brands as b', 'b.id', 'p.brand_id')
             .where({ brand_id });
+    },
+    checkBrandId(db, brand_id) {
+
     }
 };
 
