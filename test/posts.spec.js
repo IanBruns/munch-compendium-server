@@ -41,7 +41,7 @@ describe('posts endpoints', () => {
             const cjTests = testPosts.filter(post => post.brand_id === testId);
 
             return supertest(app)
-                .get(`/posts/brands/${testId}`)
+                .get(`/api/posts/brands/${testId}`)
                 .expect(200, cjTests);
         })
     });
