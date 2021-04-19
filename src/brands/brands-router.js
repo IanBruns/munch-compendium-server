@@ -5,5 +5,9 @@ const brandsRouter = express.Router();
 
 postsRouter.route('/')
     .get(async (req, res, next) => {
-        return res.status(200).json([]);
+        try {
+            return res.status(200).json([]);
+        } catch (err) {
+            next(err);
+        }
     });
