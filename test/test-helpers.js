@@ -62,6 +62,41 @@ function makePostsArray() {
     ]
 }
 
+function makeExpectedPostsArray() {
+    return [
+        {
+            id: 1,
+            brand_name: `Wendy's`,
+            brand_id: 1,
+            episode_number: 1,
+            episode_title: 'Title for Episode 1',
+            episode_link: 'Link for Episode 1',
+            campaign: 'Brand for campaign 1',
+            pr_link: 'Link for campaign 1'
+        },
+        {
+            id: 2,
+            brand_name: `Carl's Jr`,
+            brand_id: 2,
+            episode_number: 2,
+            episode_title: 'Title for Episode 2',
+            episode_link: 'Link for Episode 2',
+            campaign: 'Brand for campaign 2',
+            pr_link: null
+        },
+        {
+            id: 3,
+            brand_name: `Carl's Jr`,
+            brand_id: 2,
+            episode_number: 3,
+            episode_title: 'Title for Episode 3',
+            episode_link: 'Link for Episode 3',
+            campaign: 'Brand for campaign 3',
+            pr_link: 'Link for campaign 3'
+        },
+    ]
+}
+
 function makeMunchFixtures() {
     const testBrands = makeBrandsArray();
     const testPosts = makePostsArray();
@@ -92,4 +127,5 @@ module.exports = {
     makePostsArray,
     seedTables,
     makeMunchFixtures,
+    makeExpectedPostsArray,
 }
