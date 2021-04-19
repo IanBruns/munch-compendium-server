@@ -44,5 +44,15 @@ describe('posts endpoints', () => {
                 .get(`/api/posts/brands/${testId}`)
                 .expect(200, cjTests);
         });
+
+        it('returns a 404 if the brand id is invalid', () => {
+            const badId = 12341234;
+
+            return supertest(app)
+                .get(`/api/posts/brands/${badId}`)
+                .expect(404, {
+                    error: { message: 'No Munch Squads for this brand...yet' }
+                });
+        });
     });
 });
