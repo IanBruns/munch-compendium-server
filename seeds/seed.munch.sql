@@ -115,3 +115,5 @@ VALUES
 (78, 340, 'Doritos-Blasted Crow', 'https://maximumfun.org/episodes/my-brother-my-brother-and-me/mbmbam-340-doritos-blasted-crow/', 'Naked Chicken Chalupa', null),
 (28, 345, 'Face 2 Face: Candlenights in September', 'https://maximumfun.org/episodes/my-brother-my-brother-and-me/mbmbam-345-face-2-face-candlenights-september/', 'Boldest Choice Campaign', 'https://www.prnewswire.com/news-releases/doritos-rocks-election-season-to-empower-young-voters-300333737.html'),
 (44, 349, 'Face 2 Face: Remembering How do Do Live Shows in Portland', 'https://maximumfun.org/episodes/my-brother-my-brother-and-me/mbmbam-349-face-2-face-remembering-how-do-live-shows-portland/', 'Chicken Parm Parmi Pie', 'https://www.perthnow.com.au/community-news/weekend-kwinana-courier/waikiki-womans-chicken-parmi-pie-gets-a-go-at-jesters-c-802844'),
+(78, 351, 'Omnidirectional Scampi Blast', 'https://maximumfun.org/episodes/my-brother-my-brother-and-me/mbmbam-351-omnidirectional-scampi-blast/', 'Nacho Fries', null),
+(int, int, 'str', 'str', 'str', 'str/null'),
